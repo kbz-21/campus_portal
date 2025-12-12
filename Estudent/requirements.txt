@@ -1,0 +1,9 @@
+Django>=5.0
+djangorestframework
+djangorestframework-simplejwt[crypto]
+django-allauth
+django-rest-auth
+social-auth-app-django
+pyjwt
+requests
+python-dotenv
