@@ -39,4 +39,4 @@ class User(AbstractUser):
     objects = CustomUserManager()
 
     def __str__(self):
-        return self.username or self.email
+        return self.username or self.email  

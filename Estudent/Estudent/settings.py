@@ -75,8 +75,9 @@ AUTH_USER_MODEL = 'accounts.User'
 
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+'DEFAULT_AUTHENTICATION_CLASSES': (
+        'dj_rest_auth.jwt_auth.JWTCookieAuthentication',  # ← Use this for dj_rest_auth JWT
+        # 'rest_framework_simplejwt.authentication.JWTAuthentication',  # Keep as fallback
     ),
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
@@ -190,4 +191,15 @@ SOCIALACCOUNT_QUERY_EMAIL = True
 
 REST_AUTH_REGISTER_SERIALIZERS = {
     'REGISTER_SERIALIZER': 'accounts.serializers.CustomRegisterSerializer',
+}
+
+
+# Tell dj_rest_auth to use JWT instead of simple token
+REST_AUTH = {
+    'USE_JWT': True,
+    'JWT_AUTH_COOKIE': None,
+    'JWT_AUTH_REFRESH_COOKIE': None,
+    'JWT_AUTH_RETURN_EXPIRATION': True,
+    'JWT_AUTH_HTTPONLY': False,  # Allow JS to read if needed later
+    'REGISTER_SERIALIZER': 'accounts.serializers.CustomRegisterSerializer'
 }
