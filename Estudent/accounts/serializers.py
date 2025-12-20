@@ -26,3 +26,11 @@ class CustomRegisterSerializer(RegisterSerializer):
         user.groups.add(student_group)
         user.save()
         return user
+
+
+
+
+
+
+
+#this is serilizer
