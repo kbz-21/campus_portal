@@ -32,4 +32,10 @@ urlpatterns = [
 # Authentication Endpoints (provided by dj_rest_auth)
     path('api/auth/', include('dj_rest_auth.urls')),
     path('api/auth/registration/', include('dj_rest_auth.registration.urls')),
+
+# REQUIRED for Google OAuth callback
+    path('accounts/', include('allauth.urls')),  # ← THIS WAS MISSING!
 ]
+
+
+

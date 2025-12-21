@@ -57,7 +57,23 @@ INSTALLED_APPS = [
     'accounts',  # our app
 ]
 
-SITE_ID = 1
+SITE_ID = 2
+
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',  # 'offline' if you want refresh tokens
+        },
+        'OAUTH_PKCE_ENABLED': True,  # enhances security
+    }
+}
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -203,3 +219,14 @@ REST_AUTH = {
     'JWT_AUTH_HTTPONLY': False,  # Allow JS to read if needed later
     'REGISTER_SERIALIZER': 'accounts.serializers.CustomRegisterSerializer'
 }
+
+
+
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  # default
+    'allauth.account.auth_backends.AuthenticationBackend',  # needed for social auth
+]
+
+
+
