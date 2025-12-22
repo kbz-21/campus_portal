@@ -230,3 +230,4 @@ AUTHENTICATION_BACKENDS = [
 
 
 
+# if you have prepared  redirect page write below where to redirect 
