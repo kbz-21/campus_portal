@@ -232,3 +232,4 @@ AUTHENTICATION_BACKENDS = [
 
 # if you have prepared  redirect page write below where to 
 # actually redirect after login successful
+# this is setting which most of project configured
