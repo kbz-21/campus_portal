@@ -233,3 +233,5 @@ AUTHENTICATION_BACKENDS = [
 # if you have prepared  redirect page write below where to 
 # actually redirect after login successful
 # this is setting which most of project configured
+# LOGIN_REDIRECT_URL = '/'  # Redirect to home after login
+# # Redirect to frontend dashboard after login
