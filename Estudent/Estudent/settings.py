@@ -235,3 +235,4 @@ AUTHENTICATION_BACKENDS = [
 # this is setting which most of project configured
 # LOGIN_REDIRECT_URL = '/'  # Redirect to home after login
 # # Redirect to frontend dashboard after login
+# LOGOUT_REDIRECT_URL = '/'  # Redirect to home after logout
