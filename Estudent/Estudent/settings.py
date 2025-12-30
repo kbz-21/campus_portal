@@ -236,3 +236,5 @@ AUTHENTICATION_BACKENDS = [
 # LOGIN_REDIRECT_URL = '/'  # Redirect to home after login
 # # Redirect to frontend dashboard after login
 # LOGOUT_REDIRECT_URL = '/'  # Redirect to home after logout
+# before pushing in to git make sure to check the working of the overal code.
+
