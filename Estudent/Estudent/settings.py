@@ -238,4 +238,11 @@ AUTHENTICATION_BACKENDS = [
 # LOGOUT_REDIRECT_URL = '/'  # Redirect to home after logout
 # before pushing in to git make sure to check the working of the overal code.
 # the neat code is very necessary for the developers.
+# This is the end of the settings.py file.
+
+
+
+
+
+
 
